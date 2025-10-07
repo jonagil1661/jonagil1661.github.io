@@ -1,14 +1,11 @@
 ---
 layout: single
-title: "Home"
+title: "Jonathan Gil"
 permalink: /
 author_profile: true
+redirect_to: /about/
 ---
 
-# Welcome to My Portfolio
-
-Hello! I'm **Jonathan Gil**, a passionate developer and creative problem solver.
-
-Welcome to my portfolio website. Use the navigation menu above to explore different sections of my work and experience.
-
-*Thank you for visiting!*
+<script>
+  window.location.href = "/about/";
+</script>

@@ -349,6 +349,44 @@ function showSlideFractal(n) {
 setInterval(() => {
   changeSlideFractal(1);
 }, 5000);
+
+// Geography Web Game Carousel Functions
+let slideIndexGeography = 1;
+const captionsGeography = ['Starting Screen', 'Positive Score', 'Negative Score'];
+
+function changeSlideGeography(n) {
+  showSlideGeography(slideIndexGeography += n);
+}
+
+function currentSlideGeography(n) {
+  showSlideGeography(slideIndexGeography = n);
+}
+
+function showSlideGeography(n) {
+  const carousel = document.getElementById('carousel-geography');
+  const dots = document.querySelectorAll('#geographywebgame .indicator');
+  const caption = document.getElementById('caption-geography');
+  
+  if (n > captionsGeography.length) { slideIndexGeography = 1; }
+  if (n < 1) { slideIndexGeography = captionsGeography.length; }
+  
+  // Move the carousel container
+  carousel.style.transform = `translateX(-${(slideIndexGeography - 1) * 100}%)`;
+  
+  // Update indicators
+  dots.forEach((dot, i) => {
+    dot.classList.remove('active');
+  });
+  dots[slideIndexGeography - 1].classList.add('active');
+  
+  // Update caption
+  caption.textContent = captionsGeography[slideIndexGeography - 1];
+}
+
+// Auto-advance Geography carousel (optional)
+setInterval(() => {
+  changeSlideGeography(1);
+}, 5000);
 </script>
 
 <div class="project-nav">
@@ -359,6 +397,7 @@ setInterval(() => {
     <li><a href="#dermascan">DermaScan</a></li>
     <li><a href="#wandersync">WanderSync</a></li>
     <li><a href="#fractaltreevisualizer">Fractal Tree</a></li>
+    <li><a href="#geographywebgame">Geography Game</a></li>
   </ul>
 </div>
 
@@ -373,7 +412,7 @@ setInterval(() => {
 <div class="project" id="buzzstring">
   <h2>BuzzString</h2>
   <p class="project-date">August 2025 - October 2025</p>
-  <p>A web app that conveniently allows badminton players to submit racket stringing requests online. Features include Google Sign-In authentication, real-time stringing request tracking, and a streamlined interface for managing service status updates.</p>
+  <p>A web app that conveniently allows Georgia Tech Badminton Club members to submit racket stringing requests online. Features include Google Sign-In authentication, real-time stringing request tracking, and a streamlined interface for managing service status updates.</p>
   <p><strong>Tech:</strong> Flutter, Dart, Firebase, Google OAuth</p>
   <a href="https://buzzstring.org">Live Website</a> | 
   <a href="https://github.com/jonagil1661/BuzzString">Code</a>
@@ -455,7 +494,7 @@ setInterval(() => {
   <h2>DermaScan</h2>
   <p class="project-date">February 2025</p>
   <p>An interactive web app that lets users upload skin images for AI-powered cancer risk detection and condition-based recommendations. Built with a Streamlit interface for real-time predictions, it also includes a clinic locator to connect users with nearby dermatologists. Developed in a 4-person team during the UGAHacks 10 hackathon.</p>
-  <p><strong>Tech:</strong> Python, TensorFlow, Streamlit, Google Maps API</p>
+  <p><strong>Tech:</strong> Python, TensorFlow, Streamlit, Google Maps API, Deep Learning</p>
   <a href="https://devpost.com/software/dermascan-a0i8c7">Devpost</a> | 
   <a href="https://devpost.com/software/dermascan-a0i8c7">Live Website</a> | 
   <a href="https://github.com/n-m-gitrepos/DermaScan">Code</a>
@@ -559,6 +598,41 @@ setInterval(() => {
       <span class="indicator" onclick="currentSlideFractal(2)"></span>
       <span class="indicator" onclick="currentSlideFractal(3)"></span>
       <span class="indicator" onclick="currentSlideFractal(4)"></span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="project" id="geographywebgame">
+  <h2>Geography Web Game</h2>
+  <p class="project-date">February 2024 - March 2024</p>
+  <p>A web app built in a two-person team that quizzes users on country flags, tracks scores, and helps improve geographic knowledge. Integrated the RestCountries API to fetch flag images and names, supporting gameplay with both official and common country names via a dynamic JavaScript array.</p>
+  <p><strong>Tech:</strong> HTML, CSS, Javascript, RestCountries API</p>
+  <a href="https://github.com/jonagil1661/GeographyGame">Code</a>
+  <br>
+  
+  <div class="image-carousel">
+    <button class="carousel-nav carousel-prev" onclick="changeSlideGeography(-1)">‹</button>
+    <button class="carousel-nav carousel-next" onclick="changeSlideGeography(1)">›</button>
+    
+    <div class="carousel-container" id="carousel-geography">
+      <img src="/assets/images/geographywebgame/usa.png" alt="Starting Screen" class="carousel-image">
+      <img src="/assets/images/geographywebgame/kenya.png" alt="Positive Score" class="carousel-image">
+      <img src="/assets/images/geographywebgame/gambia.png" alt="Negative Score" class="carousel-image">
+    </div>
+    
+    <div class="carousel-caption" id="caption-geography">Starting Screen</div>
+    <div class="carousel-indicators">
+      <span class="indicator active" onclick="currentSlideGeography(1)"></span>
+      <span class="indicator" onclick="currentSlideGeography(2)"></span>
+      <span class="indicator" onclick="currentSlideGeography(3)"></span>
     </div>
   </div>
 </div>

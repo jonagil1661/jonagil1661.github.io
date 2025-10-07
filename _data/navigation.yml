@@ -1,11 +1,11 @@
 main:
-  - title: "Home"
-    url: /
   - title: "About Me"
     url: /about/
   - title: "Projects"
     url: /projects/
+  - title: "Education"
+    url: /education/
   - title: "Experience"
     url: /experience/
-  - title: "Resumdddde"
+  - title: "Resume"
     url: /resume/
