@@ -264,6 +264,11 @@ setInterval(() => {
 
 <img src="/assets/images/jonathan/me.png" alt="jonathan" class="profile-image">
 
+jonathangil@gatech.edu
+770-595-7773
+<a href="https://github.com/jonagil1661/">GitHub</a>
+<a href="https://https://www.linkedin.com/in/jonagil1661/">LinkedIn</a>
+
 
 <h1 id="introduction">Introduction</h1>
 

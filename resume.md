@@ -17,5 +17,5 @@ author_profile: true
   
   <hr>
   
-  <p><em>Last updated: October 7, 2025</em></p>
+  <p><em>Last updated: October 13, 2025</em></p>
 </div>
