@@ -264,10 +264,11 @@ setInterval(() => {
 
 <img src="/assets/images/jonathan/me.png" alt="jonathan" class="profile-image">
 
-jonathangil@gatech.edu
-770-595-7773
-<a href="https://github.com/jonagil1661/">GitHub</a>
-<a href="https://https://www.linkedin.com/in/jonagil1661/">LinkedIn</a>
+**Email:** jonathangil@gatech.edu
+
+**Phone:** 770-595-7773
+
+**Links:** <a href="https://github.com/jonagil1661/"><img src="/assets/images/logos/github_logo.png" alt="GitHub" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;"></a> <a href="https://www.linkedin.com/in/jonagil1661/"><img src="/assets/images/logos/linkedin_logo.png" alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle;"></a>
 
 
 <h1 id="introduction">Introduction</h1>
