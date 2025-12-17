@@ -387,11 +387,50 @@ function showSlideGeography(n) {
 setInterval(() => {
   changeSlideGeography(1);
 }, 5000);
+
+// Toxic Sentiment Analysis Carousel Functions
+let slideIndexToxic = 1;
+const captionsToxic = ['ROC Curves', 'ML Model Comparison', 'Inverse Document Frequency'];
+
+function changeSlideToxic(n) {
+  showSlideToxic(slideIndexToxic += n);
+}
+
+function currentSlideToxic(n) {
+  showSlideToxic(slideIndexToxic = n);
+}
+
+function showSlideToxic(n) {
+  const carousel = document.getElementById('carousel-toxic');
+  const dots = document.querySelectorAll('#toxicsentimentanalysis .indicator');
+  const caption = document.getElementById('caption-toxic');
+  
+  if (n > captionsToxic.length) { slideIndexToxic = 1; }
+  if (n < 1) { slideIndexToxic = captionsToxic.length; }
+  
+  // Move the carousel container
+  carousel.style.transform = `translateX(-${(slideIndexToxic - 1) * 100}%)`;
+  
+  // Update indicators
+  dots.forEach((dot, i) => {
+    dot.classList.remove('active');
+  });
+  dots[slideIndexToxic - 1].classList.add('active');
+  
+  // Update caption
+  caption.textContent = captionsToxic[slideIndexToxic - 1];
+}
+
+// Auto-advance Toxic carousel (optional)
+setInterval(() => {
+  changeSlideToxic(1);
+}, 5000);
 </script>
 
 <div class="project-nav">
   <h4>Project Outline</h4>
   <ul>
+    <li><a href="#toxicsentimentanalysis">Toxic Sentiment Analysis</a></li>
     <li><a href="#buzzstring">BuzzString</a></li>
     <li><a href="#buzzbrief">BuzzBrief</a></li>
     <li><a href="#dermascan">DermaScan</a></li>
@@ -409,13 +448,46 @@ setInterval(() => {
 
 
 
+<div class="project" id="toxicsentimentanalysis">
+  <h2>Toxic Sentiment Analysis</h2>
+  <p class="project-date">August 2025 - December 2025</p>
+  <p>A machine learning project that analyzes in-game chat logs to identify and understand toxic behavior, while comparing three different machine learning methods to determine the best performer for toxicity detection. Using the CONDA dataset, this project performs a comparative analysis of toxic language in competitive online environments with the goal to contribute to the development of methods that can help minimize toxicity and make online gaming a better experience for everyone.</p>
+  <p><strong>Tech:</strong> Python, Machine Learning, Seaborn, Pandas, Scikit-learn</p>
+  <a href="https://github.com/jonagil1661/toxic-sentiment-analysis" target="_blank">Code</a> | 
+  <a href="/toxic-sentiment-analysis/" target="_blank">Report</a> |
+  <a href="https://docs.google.com/presentation/d/1Kql406maa9X99TiWHtiPk6VBWCbFO1tV_2c5xzMrpZE/edit?usp=sharing" target="_blank">Presentation</a>
+
+  <br>
+  
+  <div class="image-carousel">
+    <button class="carousel-nav carousel-prev" onclick="changeSlideToxic(-1)">‹</button>
+    <button class="carousel-nav carousel-next" onclick="changeSlideToxic(1)">›</button>
+    
+    <div class="carousel-container" id="carousel-toxic">
+    <img src="/assets/images/toxicsentimentanalysis/roc_curves.png" alt="ROC Curves" class="carousel-image">
+      <img src="/assets/images/toxicsentimentanalysis/model_comparison.png" alt="ML Model Comparison" class="carousel-image">
+      <img src="/assets/images/toxicsentimentanalysis/idf.png" alt="Inverse Document Frequency" class="carousel-image">
+
+    </div>
+    
+    <div class="carousel-caption" id="caption-toxic">ROC Curves</div>
+    <div class="carousel-indicators">
+      <span class="indicator active" onclick="currentSlideToxic(1)"></span>
+      <span class="indicator" onclick="currentSlideToxic(2)"></span>
+      <span class="indicator" onclick="currentSlideToxic(3)"></span>
+
+    </div>
+  </div>
+  
+</div>
+
 <div class="project" id="buzzstring">
   <h2>BuzzString</h2>
   <p class="project-date">August 2025 - October 2025</p>
   <p>A web app that conveniently allows Georgia Tech Badminton Club members to submit racket stringing requests online. Features include Google Sign-In authentication, real-time stringing request tracking, and a streamlined interface for managing service status updates.</p>
   <p><strong>Tech:</strong> Flutter, Dart, Firebase, Google OAuth</p>
-  <a href="https://buzzstring.org">Live Website</a> | 
-  <a href="https://github.com/jonagil1661/BuzzString">Code</a>
+  <a href="https://buzzstring.org" target="_blank">Live Website</a> | 
+  <a href="https://github.com/jonagil1661/BuzzString" target="_blank">Code</a>
   <br>
   
   <div class="image-carousel">
@@ -432,7 +504,7 @@ setInterval(() => {
     
     <div class="carousel-caption" id="caption">Login Page</div>
     <div class="carousel-indicators">
-      <span class="indicator active" onclick="currentSlide(1)"></span>
+      <span class="indicator active" onclick="currentSlide(1)"></span>`
       <span class="indicator" onclick="currentSlide(2)"></span>
       <span class="indicator" onclick="currentSlide(3)"></span>
       <span class="indicator" onclick="currentSlide(4)"></span>
@@ -453,9 +525,9 @@ setInterval(() => {
   <p class="project-date">September 2025</p>
   <p>A mobile app that transforms Gmail inboxes into an entertaining TikTok-style video feed. It securely connects via Google OAuth, uses AI to summarize emails into short scripts, and generates engaging video clips with narration, visuals, and subtitles–making daily email review fast, interactive, and fun. Built in a team of three during the HackGT 12 hackathon.</p>
   <p><strong>Tech:</strong> React Native, Expo Go, Supabase, FastAPI, Python, FFmpeg, OpenAI APIs, GmailAPI</p>
-  <a href="https://devpost.com/software/buzz-brief?ref_content=my-projects-tab&ref_feature=my_projects">Devpost</a> | 
-  <a href="https://youtube.com/shorts/oFaW2A6t9D0?si=toXqmR_C9-8pnrmo">Demo</a> | 
-  <a href="https://github.com/buzz-brief/buzz-brief">Code</a>
+  <a href="https://devpost.com/software/buzz-brief?ref_content=my-projects-tab&ref_feature=my_projects" target="_blank">Devpost</a> | 
+  <a href="https://youtube.com/shorts/oFaW2A6t9D0?si=toXqmR_C9-8pnrmo" target="_blank">Demo</a> | 
+  <a href="https://github.com/buzz-brief/buzz-brief" target="_blank">Code</a>
   <br>
   
   <div class="image-carousel">
@@ -495,9 +567,9 @@ setInterval(() => {
   <p class="project-date">February 2025</p>
   <p>An interactive web app that lets users upload skin images for AI-powered cancer risk detection and condition-based recommendations. Built with a Streamlit interface for real-time predictions, it also includes a clinic locator to connect users with nearby dermatologists. Developed in a 4-person team during the UGAHacks 10 hackathon.</p>
   <p><strong>Tech:</strong> Python, TensorFlow, Streamlit, Google Maps API, Deep Learning</p>
-  <a href="https://devpost.com/software/dermascan-a0i8c7">Devpost</a> | 
-  <a href="https://devpost.com/software/dermascan-a0i8c7">Live Website</a> | 
-  <a href="https://github.com/n-m-gitrepos/DermaScan">Code</a>
+  <a href="https://devpost.com/software/dermascan-a0i8c7" target="_blank">Devpost</a> | 
+  <a href="https://devpost.com/software/dermascan-a0i8c7" target="_blank">Live Website</a> | 
+  <a href="https://github.com/n-m-gitrepos/DermaScan" target="_blank">Code</a>
   <br>
   
   <div class="image-carousel">
@@ -532,8 +604,8 @@ setInterval(() => {
   <p class="project-date">August 2024 - November 2024</p>
   <p>An Android app for real-time location tracking and user collaboration, built with MVVM architecture and Firebase for scalability. Features include secure authentication and dynamic user invitations for instant shared navigation. Developed in an Agile team.</p>
   <p><strong>Tech:</strong> Java, Firebase, MVVM, Android Studio</p>
-  <a href="https://n-m-gitrepos.github.io/">Website</a> | 
-  <a href="https://github.com/n-m-gitrepos/CS2340C_Team50">Code</a>
+  <a href="https://n-m-gitrepos.github.io/" target="_blank">Website</a> | 
+  <a href="https://github.com/n-m-gitrepos/CS2340C_Team50" target="_blank">Code</a>
   <br>
   
   <div class="image-carousel">
@@ -578,7 +650,7 @@ setInterval(() => {
   <p class="project-date">March 2024</p>
   <p>An interactive Java application built with Swing to visualize fractal trees. Includes sliders and controls for dynamic adjustments, demonstrating recursive stack behavior with a custom linked list stack to modify branch thickness, layers, and angles.</p>
   <p><strong>Tech:</strong> Java, Swing, Maven, Data Structures</p>
-  <a href="https://github.com/jonagil1661/FractalTreeApp">Code</a>
+  <a href="https://github.com/jonagil1661/FractalTreeApp" target="_blank">Code</a>
   <br>
   
   <div class="image-carousel">
@@ -615,7 +687,7 @@ setInterval(() => {
   <p class="project-date">February 2024 - March 2024</p>
   <p>A web app built in a two-person team that quizzes users on country flags, tracks scores, and helps improve geographic knowledge. Integrated the RestCountries API to fetch flag images and names, supporting gameplay with both official and common country names via a dynamic JavaScript array.</p>
   <p><strong>Tech:</strong> HTML, CSS, Javascript, RestCountries API</p>
-  <a href="https://github.com/jonagil1661/GeographyGame">Code</a>
+  <a href="https://github.com/jonagil1661/GeographyGame" target="_blank">Code</a>
   <br>
   
   <div class="image-carousel">
