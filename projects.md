@@ -504,7 +504,7 @@ setInterval(() => {
     
     <div class="carousel-caption" id="caption">Login Page</div>
     <div class="carousel-indicators">
-      <span class="indicator active" onclick="currentSlide(1)"></span>`
+      <span class="indicator active" onclick="currentSlide(1)"></span>
       <span class="indicator" onclick="currentSlide(2)"></span>
       <span class="indicator" onclick="currentSlide(3)"></span>
       <span class="indicator" onclick="currentSlide(4)"></span>
