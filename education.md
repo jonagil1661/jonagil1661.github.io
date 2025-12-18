@@ -63,15 +63,16 @@ author_profile: true
     
     <p><strong>Expected Graduation:</strong> May 2027</p>
     
-    <strong>Coursework:</strong>
+    <strong>Relevant Coursework:</strong>
       <ul style="padding-left: 20px; list-style-type: disc;">
         <li>Data Structures and Algorithms</li>
         <li>Design and Analysis of Algorithms</li>
         <li>Machine Learning</li>
         <li>Systems and Networks</li>
-        <li>Introduction to Database Systems</li>
+        <li>Intro to Database Systems</li>
         <li>Objects and Design</li>
         <li>Linear Algebra</li>
+        <li>Intro to Multivariable Calculus</li>
       
     
   </ul>

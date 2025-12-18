@@ -55,14 +55,16 @@ author_profile: true
 .experience {
   margin: 40px 0;
   padding: 30px;
-  border: 1px solid #dee2e6;
   border-radius: 8px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
 }
 
 .experience h2 {
-  color: #495057;
-  margin-bottom: 5px;
+  color: #003057;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .experience-date {
@@ -74,10 +76,13 @@ author_profile: true
 
 .experience ul {
   margin-top: 15px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .experience li {
-  margin-bottom: 10px;
+  margin: 8px 0;
+  color: #333;
   line-height: 1.6;
 }
 
@@ -131,6 +136,31 @@ author_profile: true
   z-index: 1;
 }
 
+.experience-roboinvesting {
+  background-image: url('/assets/images/toxicsentimentanalysis/stocks.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.experience-roboinvesting::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.experience-roboinvesting > * {
+  position: relative;
+  z-index: 1;
+}
+
 @media (max-width: 768px) {
   .experience-nav {
     position: static;
@@ -150,16 +180,23 @@ author_profile: true
   </ul>
 </div>
 
-<div class="experience" id="datascienceclub">
-  <h2>RoboInvesting Member</h2>
+<div class="experience experience-roboinvesting" id="datascienceclub">
+  <h2>RoboInvesting Subteam Member</h2>
   <h3>GT Data Science Club</h3>
-  <p class="experience-date">September 2025 – Present</p>
+  <p class="experience-date">August 2025 – Present</p>
   
-  <p><em>More experience details coming soon...</em></p>
+  <ul>
+    <li>Developed modular backtesting engine to simulate algorithmic trading strategies</li>
+    <li>Built AI Persona Signal Engine that aggregates investment signals to determine most reliable signal per stock</li>
+    <li>Created flexible experimentation framework to evaluate trading strategies across multiple tickers</li>
+    <li>Enhanced risk-adjusted decision-making, integrating portfolio capital management into strategy loop</li>
+    <li>Implemented trading mechanics to control drawdowns</li>
+    
+  </ul>
 </div>
 
 <div class="experience experience-aad" id="aad">
-  <h2>Undergraduate Researcher</h2>
+  <h2>Undergraduate Research Assistant</h2>
   <h3>GT Automated Algorithm Design</h3>
   <p class="experience-date">January 2025 – Present</p>
   <a href="@https://vip.gatech.edu/teams/entry/1312/ ">VIP Team Page</a>
@@ -172,8 +209,8 @@ author_profile: true
 </div>
 
 <div class="experience experience-robojackets" id="robojackets">
-  <h2>Software Engineer</h2>
-  <h3>GT RoboJackets RoboCup</h3>
+  <h2>RoboCup Software Subteam Member</h2>
+  <h3>GT RoboJackets</h3>
   <p class="experience-date">August 2024 – May 2025</p>
   
   <ul>

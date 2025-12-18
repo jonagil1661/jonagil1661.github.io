@@ -273,7 +273,7 @@ setInterval(() => {
 
 <h1 id="introduction">Introduction</h1>
 
-Howdy! My name is Jonathan Gil, and I'm a third year CS major at Georgia Tech! My Concentrations/Treads are in Information-Internetwork and Intelligence. 
+Howdy! My name is Jonathan Gil, and I am an undergraduate third-year student at Georgia Tech majoring in Computer Science with threads in Intelligence and Information-Internetwork!
 
 
 
