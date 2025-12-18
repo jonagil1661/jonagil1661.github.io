@@ -454,7 +454,7 @@ setInterval(() => {
   <p>A machine learning project that analyzes in-game chat logs to identify and understand toxic behavior, while comparing three different machine learning methods to determine the best performer for toxicity detection. Using the CONDA dataset, this project performs a comparative analysis of toxic language in competitive online environments with the goal to contribute to the development of methods that can help minimize toxicity and make online gaming a better experience for everyone.</p>
   <p><strong>Tech:</strong> Python, Machine Learning, Seaborn, Pandas, Scikit-learn</p>
   <a href="https://github.com/jonagil1661/toxic-sentiment-analysis" target="_blank">Code</a> | 
-  <a href="/toxic-sentiment-analysis/" target="_blank">Report</a> |
+  <a href="/assets/files/report.pdf" target="_blank">Report</a> |
   <a href="https://docs.google.com/presentation/d/1Kql406maa9X99TiWHtiPk6VBWCbFO1tV_2c5xzMrpZE/edit?usp=sharing" target="_blank">Presentation</a>
 
   <br>
