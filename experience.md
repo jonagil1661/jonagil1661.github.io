@@ -55,16 +55,14 @@ author_profile: true
 .experience {
   margin: 40px 0;
   padding: 30px;
+  border: 1px solid #dee2e6;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  position: relative;
+  background: #fff;
 }
 
 .experience h2 {
-  color: #003057;
-  font-size: 24px;
-  margin-bottom: 10px;
+  color: #495057;
+  margin-bottom: 5px;
 }
 
 .experience-date {
@@ -76,13 +74,10 @@ author_profile: true
 
 .experience ul {
   margin-top: 15px;
-  list-style-type: none;
-  padding-left: 0;
 }
 
 .experience li {
-  margin: 8px 0;
-  color: #333;
+  margin-bottom: 10px;
   line-height: 1.6;
 }
 
